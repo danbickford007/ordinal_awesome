@@ -1,11 +1,11 @@
-require_relative '../lib/array'
+require_relative "../lib/ordinal_awesome"
 
-describe Array do
+describe OrdinalAwesome do
 
-  let(:array) { [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16] }
+  let(:array) { (1..99).to_a }
   let(:empty_array) { [] }
 
-  context 'when array contains index' do
+  context 'when an array contains a value at an ordinal' do
 
     it 'should return array index at 1' do
       expect(array.second).to eq(array[1])
@@ -53,10 +53,10 @@ describe Array do
   
   end
 
-  context 'when array is empty' do
+  context 'when an array is empty' do
 
     it 'should return nil' do
-      expect(empty_array.third).to be_nil      
+      expect(empty_array.third).to be_nil
     end
 
   end
